@@ -1,1 +1,55 @@
-Stronka
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Moja przykładowa strona</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+      color: #222;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      margin-top: 40px;
+      color: #2c3e50;
+    }
+    button {
+      background-color: #2980b9;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 30px;
+    }
+    button:hover {
+      background-color: #1c5980;
+    }
+    p {
+      font-size: 20px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Witaj na mojej stronie!</h1>
+  <p>Kliknij przycisk poniżej, żeby zobaczyć wiadomość.</p>
+  <button id="showMessageBtn">Pokaż wiadomość</button>
+  <p id="message" style="display:none; margin-top:20px; font-weight:bold; color:#e74c3c;"></p>
+
+  <script>
+    const button = document.getElementById('showMessageBtn');
+    const message = document.getElementById('message');
+
+    button.addEventListener('click', () => {
+      message.textContent = "Super, że tu jesteś! Miłego kodowania! 🚀";
+      message.style.display = 'block';
+    });
+  </script>
+</body>
+</html>
